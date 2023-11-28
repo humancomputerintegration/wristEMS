@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.mapbox.maps.token'
+
+android {
+    compileSdkVersion 33
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.mapbox.navigation.examples"
+        minSdkVersion 21
+        targetSdkVersion 33
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled = false
+            manifestPlaceholders = [enableCrashReporting: "false"]
+        }
+        release {
+            minifyEnabled true
+            manifestPlaceholders = [enableCrashReporting: "true"]
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/java/com/mapbox/navigation/examples/dropinui/res',
+                    'src/main/java/com/mapbox/navigation/examples/standalone/res',
+            ]
+
+            def standaloneDirs = file("$projectDir/src/main/java/com/mapbox/navigation/examples/standalone")
+                    .listFiles({ it.isDirectory() } as FileFilter)
+                    .collect { it.name }
+            standaloneDirs.forEach {
+                res.srcDirs += 'src/main/java/com/mapbox/navigation/examples/standalone/' + it + '/res'
+            }
+
+            def dropInUIDirs = file("$projectDir/src/main/java/com/mapbox/navigation/examples/dropinui")
+                    .listFiles({ it.isDirectory() } as FileFilter)
+                    .collect { it.name }
+            dropInUIDirs.forEach {
+                res.srcDirs += 'src/main/java/com/mapbox/navigation/examples/dropinui/' + it + '/res'
+            }
+        }
+    }
+}
+
+dependencies {
+    // Mapbox Navigation SDK
+    implementation "com.mapbox.navigation:android:2.10.1"
+    implementation "com.mapbox.navigation:ui-dropin:2.10.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.21"
+    implementation "androidx.core:core-ktx:1.9.0"
+    implementation "com.google.android.material:material:1.7.0"
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation "androidx.appcompat:appcompat:1.5.1"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation "com.google.android.gms:play-services-location:20.0.0"
+    implementation "com.squareup.leakcanary:leakcanary-android:2.9.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+}
