@@ -9,10 +9,10 @@ Make sure you follow the steps under the [Installation](https://docs.mapbox.com/
 Go to res/values and there you should add a file called: mapbox_access_token.xml. Add your public token as a string. 
 In mapbox_access_token.xml:
 
-//<?xml version="1.0" encoding="utf-8"?>
+//"<?xml version="1.0" encoding="utf-8"?>
 //<resources xmlns:tools="http://schemas.android.com/tools">
 //    <string name="mapbox_access_token">CHANGE THIS TO THE PUBLIC MAPBOX TOKEN</string>
-//</resources>
+//</resources>"
 
 
 
