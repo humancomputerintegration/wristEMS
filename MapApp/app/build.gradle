@@ -18,8 +18,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments clearPackageData: 'true'
         vectorDrawables.useSupportLibrary = true
-        versionCode = 0
-        versionName = "alpha 0"
+        versionCode = 1
+        versionName = "alpha 1"
     }
 
     testOptions {
