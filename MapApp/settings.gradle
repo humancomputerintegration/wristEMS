@@ -2,4 +2,4 @@ include (
         ':app',
 
 )
-rootProject.name = "Mapbox Navigation Examples"
+rootProject.name = "Wrist EMS Map App"

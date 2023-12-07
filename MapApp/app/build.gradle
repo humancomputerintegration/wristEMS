@@ -3,7 +3,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.mapbox.maps.token'
 
 android {
-    compileSdkVersion 33
+    namespace = "com.mapbox.navigation.examples"
+    compileSdk 34
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -11,12 +12,14 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.mapbox.navigation.examples"
+        applicationId = "com.akiphvmi.wristems.mapapp"
         minSdkVersion 21
         targetSdkVersion 33
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments clearPackageData: 'true'
         vectorDrawables.useSupportLibrary = true
+        versionCode = 0
+        versionName = "alpha 0"
     }
 
     testOptions {
