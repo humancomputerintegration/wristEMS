@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="title_navigation_view">Turn-By-Turn EMS</string>
+  <string name="description_navigation_view">Application of wrist EMS Map App. Signal for EMS is sent at the point to turn.</string>
+
+</resources>
