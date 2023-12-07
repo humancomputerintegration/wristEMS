@@ -30,3 +30,7 @@ Run the project and enjoy!
 If you clone the repository to a drive/partition different from the one in which SDKs are installed, such as `/mnt/g` (google drive), which could occur exeptions while the build. To avoid this, it is reccomended to clone and build this project under the same drive/partitions. 
 
 When building, at least check the value of `complieSDK` in the `build.gradle` (Module level). Your target Android version should be between `minSdkVersion` and `compileSDK`
+
+## TODO
+- [ ] change signal when turning (the line can be searched by ctrl+shift+f with "turning")
+- [ ] refactoring (Test code never work. maybe it is deprecated even in the original examples
