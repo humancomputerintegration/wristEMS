@@ -1,6 +1,6 @@
 # Maps app for Smartwatch EMS
 
-This project is a smartwatch app for using Maps to travel. It sends a bluetooth signal to low energy bluetooth devices whenever a turn is coming up and as soon as the turn is finished.
+This project is a smartphone app for using Maps to travel. It sends a bluetooth signal to low energy bluetooth devices whenever a turn is coming up and as soon as the turn is finished.
 
 ## Installation
 
