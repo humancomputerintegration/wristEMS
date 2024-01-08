@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/layout"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FF000000"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Wrist Lock"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="14dp" />
+
+
+    <Switch
+        android:id="@+id/onOffSwitch"
+        android:layout_width="142dp"
+        android:layout_height="62dp"
+        android:text="Unlocked: "
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/rescanBeacon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rescan Beacon"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/rescanEMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rescan EMS"
+        android:textAlignment="center" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

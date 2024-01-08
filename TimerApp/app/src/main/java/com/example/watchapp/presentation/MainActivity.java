@@ -10,6 +10,7 @@ import com.example.watchapp.R;
 import com.example.watchapp.presentation.CountdownActivity;
 
 public class MainActivity extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
